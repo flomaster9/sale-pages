@@ -19,6 +19,12 @@ gulp.task('build-js', function() {
 		.pipe(gulp.dest('./dist/scripts/'));
 });
 
+gulp.task('build-images', function() {
+  gulp.src('./src/images/**/*')
+		.pipe(gulp.dest('./dist/images/'));
+});
+
+
 gulp.task('build-css', function() {
     gulp.src('./src/sass/application.scss')
     	.pipe(sourcemaps.init())
@@ -34,7 +40,7 @@ gulp.task('watcher',['build-css', 'build-html', 'build-js'], function() {
     gulp.watch('./src/dist/**/*').on('change', browserSync.reload);
 });
 
-gulp.task('serve',['watcher'], function() {
+gulp.task('serve',['build-images', 'watcher'], function() {
     browserSync.init({
     	server: {
     		baseDir: './dist',
