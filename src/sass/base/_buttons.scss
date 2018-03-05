@@ -1,0 +1,72 @@
+button {
+  border: none;
+  outline: none;
+
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: $base-animation-duration;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &__default {
+    background-color: transparent;
+    color: $gray;
+
+    &:hover {
+      background-color: $cinnabar;
+      color: #fff;
+      filter: brightness(95%);
+    }
+
+    &:active {
+      filter: brightness(85%);
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    &:active {
+      filter: brightness(80%);
+    }
+  }
+
+  &_gray {
+    background-color: $mercury;
+    color: $silver;
+    font-weight: 600;
+    font-size: 14px;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    &:active {
+      filter: brightness(85%);
+    }
+  }
+
+  &_vertical-center {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

@@ -1,0 +1,17 @@
+.nav {
+  margin-left: auto;
+  margin-right: 20px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    font-size: 18px;
+    font-weight: 700;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}

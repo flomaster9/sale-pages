@@ -1,0 +1,14 @@
+.headline {
+  &_center {
+    text-align: center;
+  }
+  &__main {
+    font-weight: 700;
+    font-size: 48px;
+  }
+
+  &__bold {
+    font-weight: 600;
+    font-size: 48px;
+  }
+}

@@ -2,6 +2,4 @@
 
 document.addEventListener("DOMContentLoaded", ready);
 
-(function () {
-  console.log('hello');
-});
+function ready() {}
