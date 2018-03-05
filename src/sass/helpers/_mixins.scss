@@ -1,0 +1,18 @@
+@mixin make-container($max-width, $padding) {
+  $media-query: '(max-width: #{$max-width + $padding * 2})';
+  display: block;
+  margin: 0 auto;
+  max-width: $max-width;
+
+  @media #{$media-query} {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+@mixin image-container($width, $height) {
+  max-height: $height;
+  max-width: $width;
+  min-height: $height;
+  min-width: $width;
+}

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  @include make-container(1200px, 15px);
+
+  &_relative {
+    position: relative;
+  }
+}
+
+main {
+  margin-top: 90px;
+
+  @media #{$tablet-screen-sm-max} {
+    margin-top: 50px;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}

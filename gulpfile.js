@@ -47,6 +47,6 @@ gulp.task('serve',['build-images', 'watcher'], function() {
         open: true,
       },
 
-      startPath: './html/index.html'
+      startPath: './html/main.html'
     })
 });
