@@ -4,12 +4,15 @@
   }
 
   &__main {
-    font-weight: 700;
-    font-size: 48px;
-  }
-
-  &__bold {
     font-weight: 600;
     font-size: 48px;
+
+    @media #{$tablet-screen-sm-max} {
+      font-size: 40px;
+    }
+
+    @media #{$mobile-screen-md-max} {
+      font-size: 32px;
+    }
   }
 }

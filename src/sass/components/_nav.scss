@@ -62,10 +62,14 @@
     width: 100%;
     border-top: 2px solid $cod-gray;
     background-color: $silver;
-    display: none;
+    transform:
+      translate(100%, -50%)
+      scale(0);
 
     &_open {
-      display: flex;
+      transform:
+        translate(0)
+        scale(1);
     }
 
     &__language {

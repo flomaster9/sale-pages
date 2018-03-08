@@ -12,6 +12,7 @@
   @media #{$mobile-screen-sm-max} {
     flex-direction: column;
     width: 300px;
+    margin-top: 30px;
   }
 
   &__btn {
@@ -20,38 +21,35 @@
     }
   }
 
+  &__btn-column {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px !important;
+
+    &-text {
+      font-size: 11px;
+      line-height: 10px;
+    }
+
+    &-counter {
+      font-size: 14px;
+      color: $cod-gray;
+    }
+  }
+
+  &__btn-text-margin {
+    margin-right: 5px;
+  }
+
+  &__btn-text-icon {
+    transform: scale(0.8);
+  }
+
   &__list {
     display: flex;
     flex: 1;
     justify-content: space-between;
     margin: 0 30px;
-  }
-
-  &__icon {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    border-radius: 50%;
-
-    &-fb {
-      background-color: #306199;
-    }
-  
-    &-twitter {
-      background-color: #26c4f1;
-    }
-  
-    &-mail {
-      background-color: #00c19a;
-    }
-  
-    &-google {
-      background-color: $cinnabar;
-    }
-
-    @media #{$tablet-screen-md-max} {
-      width: 40px;
-      height: 40px;
-    }
   }
 }
