@@ -22,6 +22,19 @@ body,
   &_relative {
     position: relative;
   }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    position: relative;
+
+    @media #{$mobile-screen-lg-max} {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
 }
 
 main {

@@ -22,6 +22,24 @@ button {
     outline: none;
   }
 
+  &_sm {
+    padding: 8px;
+  }
+
+  &:not(.btn_sm) {
+    @media #{$desktop-screen-xs-max} {
+      padding: 10px 16px;
+    }
+
+    @media #{$tablet-screen-md-max} {
+      padding: 10px 12px;
+    }
+
+    @media #{$tablet-screen-sm-max} {
+      padding: 10px;
+    }
+  }
+
   &__default {
     background-color: transparent;
     color: $gray;
@@ -29,11 +47,11 @@ button {
     &:hover {
       background-color: $cinnabar;
       color: #fff;
-      filter: brightness(95%);
     }
 
     &:active {
-      filter: brightness(85%);
+      background-color: darken($cinnabar, 10%);
+      color: darken(#fff, 10%);
     }
   }
 
@@ -46,7 +64,7 @@ button {
     }
 
     &:active {
-      filter: brightness(80%);
+      filter: brightness(85%);
     }
   }
 
@@ -57,11 +75,13 @@ button {
     font-size: 14px;
 
     &:hover {
-      filter: brightness(90%);
+      background-color: darken($mercury, 10%);
+      color: darken($silver, 10%);
     }
 
     &:active {
-      filter: brightness(85%);
+      background-color: darken($mercury, 15%);
+      color: darken($silver, 15%);
     }
   }
 

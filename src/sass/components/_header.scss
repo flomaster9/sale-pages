@@ -1,6 +1,67 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 40px;
+  &__logo {
+    @media #{$mobile-screen-lg-max} {
+      flex: 1;
+    }
+  }
+
+  &__logo-text {
+    font-weight: 700;
+    font-size: 48px;
+
+    @media #{$desktop-screen-xs-max} {
+      font-size: 40px;
+    }
+
+    @media #{$tablet-screen-md-max} {
+      font-size: 32px;
+    }
+
+    @media #{$mobile-screen-lg-max} {
+      font-size: 25px;
+    }
+  }
+
+  &__toggler {
+    @media #{$mobile-screen-lg-max} {
+      margin-left: 20px;
+    }
+  }
+
+  &__language-toggler {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__language-toggler-btn {
+    align-items: center;
+  }
+
+  &__toggler {
+    @media #{$mobile-screen-lg-min} {
+      display: none;
+    }
+  }
+
+  &__toggler-btn,
+  &__language-toggler-btn {
+    &:hover {
+      background-color: darken(#fff, 10%);
+    }
+
+    &:active,
+    &.toggler_active {
+      background-color: darken(#fff, 15%);
+    }
+  }
+
+  &__toggler-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    color: $gray;
+  }
 }

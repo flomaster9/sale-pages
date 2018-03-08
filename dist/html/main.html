@@ -7,33 +7,42 @@
   <title>Document</title>
   <link rel="stylesheet" href="../styles/application.css">
   <script src="../scripts/application.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <body>
   <div class="wrapper">
     <!-- HEADER -->
-    <div class="container">
-      <div class="header">
-        <div class="logo">
-          <h1 class="headline__main">MANUALITY</h1>
+    <div class="header">
+      <div class="container container__header">
+        <div class="header__logo">
+          <h1 class="header__logo-text">MANUALITY</h1>
         </div>
-        <div class="nav">
+        <div class="nav" id="header-nav">
           <ul class="nav__list">
             <li class="nav__list-item">
-              <a class="uppercase btn btn__default" href="#">categories</a>
+              <a class="nav__text uppercase btn btn__default nav__list-item-link" href="#">categories</a>
             </li>
             <li class="nav__list-item">
-              <a class="uppercase btn btn__default" href="#">brands</a>
+              <a class="nav__text uppercase btn btn__default nav__list-item-link" href="#">brands</a>
             </li>
             <li class="nav__list-item">
-              <a class="uppercase btn btn__default" href="#">blog</a>
+              <a class="nav__text uppercase btn btn__default nav__list-item-link" href="#">blog</a>
             </li>
             <li class="nav__list-item">
-              <a class="uppercase btn btn__default" href="#">answers</a>
+              <a class="nav__text uppercase btn btn__default nav__list-item-link" href="#">answers</a>
             </li>
           </ul>
         </div>
-        <div>
-          <button class="uppercase btn">eng</button>
+        <div class="header__language">
+          <button class="header__language-toggler-btn uppercase btn btn_sm">
+            <img class="icon__language" src="../images/assets/icons/en.png" alt="">
+            <span class="nav__text text_bold text_gray">eng</span>
+          </button>
+        </div>
+        <div class="header__toggler">
+          <button class="header__toggler-btn btn" id="header-toggler">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -47,7 +56,7 @@
       <form class="search__form-container">
         <input class="search__form" type="text" placeholder="search for manual...">
         <button class="btn__icon search__form-btn">
-          <i class="search__form-btn-icon"></i>
+            <i class="fas fa-search"></i>
         </button>
       </form>
     </div>
