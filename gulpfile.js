@@ -1,9 +1,9 @@
 let gulp = require('gulp');
 let sass = require('gulp-sass');
 let browserSync = require('browser-sync').create();
-let sourcemaps = require('gulp-sourcemaps');
 let concat = require('gulp-concat');
 let babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('build-html', function() {
 	gulp.src('./src/html/**/*.html')
@@ -27,9 +27,11 @@ gulp.task('build-images', function() {
 
 gulp.task('build-css', function() {
     gulp.src('./src/sass/application.scss')
-    	.pipe(sourcemaps.init())
-    	.pipe(sass())
-    	.pipe(sourcemaps.write())
+      .pipe(sass())
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
     	.pipe(gulp.dest('./dist/styles/'));
 });
 
