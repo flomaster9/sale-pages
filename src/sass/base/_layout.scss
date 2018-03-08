@@ -16,11 +16,26 @@ body,
   background-position: 0 0;
 }
 
+.section {
+  padding: 30px 0;
+}
+
 .container {
   @include make-container(1200px, 15px);
 
   &_relative {
     position: relative;
+  }
+
+  &__footer {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$mobile-screen-md-max} {
+      flex-direction: column-reverse;
+    }
   }
 
   &__header {
@@ -43,8 +58,4 @@ main {
   @media #{$tablet-screen-sm-max} {
     margin-top: 50px;
   }
-}
-
-[v-cloak] {
-  display: none;
 }

@@ -43,14 +43,12 @@
     }
   }
 
-  &__toggler-btn,
   &__language-toggler-btn {
     &:hover {
       background-color: darken(#fff, 10%);
     }
 
-    &:active,
-    &.toggler_active {
+    &:active {
       background-color: darken(#fff, 15%);
     }
   }
@@ -62,6 +60,16 @@
     width: 36px;
     height: 36px;
     font-size: 16px;
-    color: $gray;
+    color: $mercury;
+    background-color: $cod-gray;
+
+    &:hover {
+      background-color: lighten($cod-gray, 10%);
+    }
+
+    &:active,
+    &.toggler_active {
+      background-color: lighten($cod-gray, 20%);
+    }
   }
 }

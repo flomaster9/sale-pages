@@ -15,4 +15,14 @@
       font-size: 32px;
     }
   }
+
+  &__section {
+    font-size: 48px;
+    font-weight: 700;
+    color: $cod-gray;
+
+    &_red {
+      color: $cinnabar;
+    }
+  }
 }

@@ -1,7 +1,15 @@
 .next {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 70px;
+
+  @media #{$desktop-screen-xs-max} {
+    margin-top: 40px;
+  }
+
+  @media #{$mobile-screen-sm-max} {
+    margin-top: 30px;
+  }
 
   &__btn {
     display: inline-flex;
