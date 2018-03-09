@@ -1,0 +1,82 @@
+.about {
+  &__text {
+    color: $mine-shaft;
+    font-weight: 500;
+    margin: 20px 0;
+    line-height: 1.8;
+    font-size: 18px;
+
+    @media #{$tablet-screen-sm-max} {
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @media #{$desktop-screen-xs-max} {
+      flex-direction: column;
+    }
+  }
+
+  &__feature-container,
+  &__text-container {
+    @media #{$desktop-screen-xs-min} {
+      width: 50%;
+    }
+  }
+
+  &__feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &__feature-item {
+    display: flex;
+    width: 42%;
+    margin: 10px 4%;
+    max-width: 300px;
+
+    @media #{$mobile-screen-lg-max} {
+      width: 300px;
+    }
+  }
+
+  &__feature {
+    transition: $base-animation-duration;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px;
+    text-decoration: none;
+    background-color: $alabaster;
+
+    &:hover {
+      background-color: $cod-gray;
+
+      .about__feature-num {
+        color: #fff;
+      }
+    }
+  }
+
+  &__feature-text-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__feature-num {
+    transition: $base-animation-duration;
+    font-size: 32px;
+    color: $cod-gray;
+  }
+
+  &__feature-text {
+    font-size: 18px;
+    color: $silver;
+  }
+}

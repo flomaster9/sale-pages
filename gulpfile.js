@@ -6,8 +6,8 @@ let babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('build-html', function() {
-	gulp.src('./src/html/**/*.html')
-		.pipe(gulp.dest('./dist/html/'));
+	gulp.src('./src/html/index.html')
+		.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('build-js', function() {
@@ -29,7 +29,7 @@ gulp.task('build-css', function() {
     gulp.src('./src/sass/application.scss')
       .pipe(sass())
       .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
+        browsers: ['last 5 versions'],
         cascade: false
       }))
     	.pipe(gulp.dest('./dist/styles/'));
@@ -49,6 +49,6 @@ gulp.task('serve',['build-images', 'watcher'], function() {
         open: true,
       },
 
-      startPath: './html/main.html'
+      startPath: './index.html'
     })
 });
