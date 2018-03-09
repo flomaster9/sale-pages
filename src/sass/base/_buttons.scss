@@ -17,7 +17,7 @@ button {
   cursor: pointer;
   display: inline-flex;
   
-  &:focus {
+  &:focus:not(.btn_outline):not(.btn__icon) {
     border: none;
     outline: none;
   }
@@ -26,7 +26,7 @@ button {
     padding: 8px;
   }
 
-  &:not(.btn_sm) {
+  &:not(.btn_sm):not(.btn_outline) {
     @media #{$desktop-screen-xs-max} {
       padding: 10px 16px;
     }
@@ -40,11 +40,29 @@ button {
     }
   }
 
+  &_outline {
+    transition: $base-animation-duration;
+    border: 1px solid $royal-blue;
+    color: $royal-blue;
+    padding: 0 30px;
+    font-size: 15px;
+    line-height: 1;
+
+    &:hover {
+      filter: brightness(60%);
+    }
+
+    &:active {
+      filter: brightness(10%);
+    }
+  }
+
   &__default {
     background-color: transparent;
     color: $gray;
 
-    &:hover {
+    &:hover,
+    &.btn__default-active {
       background-color: $cinnabar;
       color: #fff;
     }

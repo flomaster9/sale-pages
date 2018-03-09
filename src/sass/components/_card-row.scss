@@ -1,4 +1,5 @@
 .card-row {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
@@ -19,6 +20,15 @@
   @media #{$tablet-screen-sm-max} {
     flex-direction: column;
     text-align: center;
+  }
+
+  &__anchor {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    background-color: $silver;
   }
 
   &__container {
@@ -102,22 +112,3 @@
     }
   }
 }
-// <div class="card-row__container">
-// <div class="card-row">
-//   <div class="card-row__content">
-//     <div class="card-row__headline">
-//       <h3 class="card-row__headline-text">
-//         <span class="card-row__headline-num">1</span>
-//         <span class="card-row__headline-content">Start Downloadr - View PDF</span>
-//       </h3>
-//     </div>
-//     <p class="card-row__text">
-//       Convert from DOC to PDF, from PDF to DOC simply with free online app! 
-//       <a href="#" class="card-row__text-link">download.fromdoctopdf.com</a> 
-//     </p>
-//   </div>
-//   <a href="" class="btn btn__icon card-row__btn-next">
-//     <img class="social__btn-text-icon" src="images/assets/icons/arrow.png" alt="">
-//   </a>
-// </div>
-// </div>

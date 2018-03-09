@@ -1,3 +1,152 @@
 .brand {
   background-color: $alabaster;
+
+  &__nav {
+    flex-shrink: 0;
+
+    @media #{$mobile-screen-md-max} {
+      margin-top: 20px;
+    }
+  }
+
+  &__nav-list {
+    @media #{$desktop-screen-xs-max} {
+      flex-direction: column;
+    }
+  }
+
+  &__nav-list-item {
+    @media #{$desktop-screen-xs-max} {
+      margin: 2px 0;
+    }
+  }
+
+  &__nav-link {
+    font-size: 18px;
+    color: $cod-gray;
+
+    &:hover:not(.btn__default-active) {
+      background-color: transparent;
+      color: $cinnabar;
+    }
+  }
+
+  &__headline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$desktop-screen-xs-max} {
+      align-items: flex-start;
+    }
+
+    @media #{$mobile-screen-md-max} {
+      flex-direction: column;
+    }
+  }
+
+  &__headline-text {
+    max-width: 500px;
+
+    &_sm {
+      margin-top: 20px;
+
+      @media #{$desktop-screen-xs-min} {
+        display: none;
+      }
+    }
+
+    &_xl {
+      margin-top: 10px;
+
+      @media #{$desktop-screen-xs-max} {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    column-count: 4;
+
+    @media #{$tablet-screen-sm-max} {
+      column-count: 2;
+      margin-left: 10%;
+    }
+
+    @media #{$mobile-screen-xs-max} {
+      column-count: 1;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    padding: 8px;
+    transition: $base-animation-duration;
+    padding-left: 20px;
+    color: $cod-gray;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      color: $cinnabar;
+
+      &:before {
+        content: url('../images/assets/icons/arrow-right-red.png'); 
+      }
+    }
+
+    &:before {
+      content: url('../images/assets/icons/arrow-right.png');
+      display: inline-block;
+      width: 14px;
+      height: 11px;
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+
+  &__manual-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    @media #{$desktop-screen-xs-max} {
+      column-count: 3;
+      display: block;
+    }
+
+    @media #{$tablet-screen-sm-max} {
+      column-count: 2;
+    }
+
+    @media #{$mobile-screen-sm-max} {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__manual-item {
+    flex-shrink: 0;
+
+    @media #{$desktop-screen-xs-max} {
+      margin: 2px 0;
+    }
+  }
+
+  &__manual-link {
+    @media #{$desktop-screen-sm-max} {
+      padding: 0 20px;
+    }
+  }
+
+  &__manual-anchor {
+    background-color: $silver;
+    cursor: pointer;
+    font-size: 14px;
+    color: $cod-gray;
+    padding: 0 10px 0 30px;
+    text-decoration: none;
+  }
 }

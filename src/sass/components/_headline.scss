@@ -21,6 +21,10 @@
     font-weight: 700;
     color: $cod-gray;
 
+    @media #{$tablet-screen-sm-max} {
+      font-size: 35px;
+    }
+
     &_red {
       color: $cinnabar;
     }
