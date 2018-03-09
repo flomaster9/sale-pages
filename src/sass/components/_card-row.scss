@@ -1,0 +1,123 @@
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+
+  &:nth-child(odd) {
+    border: 2px solid $alto;
+  }
+
+  &:nth-child(even) {
+    border-left: 2px solid $alto;
+    border-right: 2px solid $alto;
+  }
+
+  &:last-child {
+    border-bottom: 2px solid $alto;
+  }
+
+  @media #{$tablet-screen-sm-max} {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__container {
+    margin-top: 40px;
+  }
+
+  &__headline-text {
+    color: $mine-shaft;
+    font-size: 36px;
+
+    @media #{$tablet-screen-sm-max} {
+      font-size: 30px;
+    }
+
+    @media #{$mobile-screen-md-max} {
+      font-size: 25px;
+    }
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+  }
+
+  &__headline-num {
+    display: inline-block;
+    line-height: 1;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 2px solid $royal-blue;
+  }
+
+  &__text {
+    color: $gray;
+    font-weight: 100;
+    line-height: 1.5;
+    font-size: 18px;
+
+    @media #{$tablet-screen-sm-min} {
+      margin-left: 35px;
+      font-size: 16px;
+    }
+
+    @media #{$mobile-screen-md-max} {
+      font-size: 15px;
+    }
+  }
+
+  &__text-link {
+    color: $silver;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__btn-next {
+    margin: auto 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $royal-blue;
+
+    &:focus,
+    &:active,
+    &:hover {
+      border: 2px solid $royal-blue;
+      filter: none;
+    }
+
+    &:hover {
+      border-color: darken($royal-blue, 20%);
+    }
+
+    &:active {
+      border-color: darken($royal-blue, 40%);
+    }
+
+    @media #{$tablet-screen-sm-max} {
+      margin: 20px auto 0 auto;
+    }
+  }
+}
+// <div class="card-row__container">
+// <div class="card-row">
+//   <div class="card-row__content">
+//     <div class="card-row__headline">
+//       <h3 class="card-row__headline-text">
+//         <span class="card-row__headline-num">1</span>
+//         <span class="card-row__headline-content">Start Downloadr - View PDF</span>
+//       </h3>
+//     </div>
+//     <p class="card-row__text">
+//       Convert from DOC to PDF, from PDF to DOC simply with free online app! 
+//       <a href="#" class="card-row__text-link">download.fromdoctopdf.com</a> 
+//     </p>
+//   </div>
+//   <a href="" class="btn btn__icon card-row__btn-next">
+//     <img class="social__btn-text-icon" src="images/assets/icons/arrow.png" alt="">
+//   </a>
+// </div>
+// </div>

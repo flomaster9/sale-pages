@@ -35,9 +35,13 @@
 
   &__feature-item {
     display: flex;
-    width: 42%;
-    margin: 10px 4%;
+    width: 45%;
+    margin: 10px 0 10px auto;
     max-width: 300px;
+
+    @media #{$desktop-screen-xs-max} {
+      margin: 10px 20px;
+    }
 
     @media #{$mobile-screen-lg-max} {
       width: 300px;
