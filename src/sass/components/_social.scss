@@ -16,6 +16,8 @@
   }
 
   &__btn {
+    padding: 10px 15px;
+
     @media #{$mobile-screen-sm-max} {
       margin: 10px auto;
     }
@@ -39,7 +41,7 @@
   }
 
   &__btn-text-margin {
-    margin-right: 5px;
+    margin-right: 8px;
   }
 
   &__btn-text-icon {

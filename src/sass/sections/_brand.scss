@@ -91,12 +91,12 @@
       color: $cinnabar;
 
       &:before {
-        content: url('../images/assets/icons/arrow-right-red.png'); 
+        content: url('../images/assets/icons/double-arrow-right-red.png'); 
       }
     }
 
     &:before {
-      content: url('../images/assets/icons/arrow-right.png');
+      content: url('../images/assets/icons/double-arrow-right.png');
       display: inline-block;
       width: 14px;
       height: 11px;
@@ -132,6 +132,12 @@
 
     @media #{$desktop-screen-xs-max} {
       margin: 2px 0;
+    }
+
+    @media #{$tablet-screen-sm-max} {
+      display: flex;
+      justify-content: center;
+      margin: 5px 0;
     }
   }
 

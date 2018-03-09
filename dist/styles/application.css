@@ -210,6 +210,9 @@ button {
 .icon__language {
   margin-right: 5px; }
 
+.icon__feature {
+  margin: auto; }
+
 .icon__search {
   padding: 30px;
   width: 100%;
@@ -457,9 +460,11 @@ button {
       flex-direction: column;
       width: 300px;
       margin-top: 30px; } }
-  @media (max-width: 450px) {
-    .social__btn {
-      margin: 10px auto; } }
+  .social__btn {
+    padding: 10px 15px; }
+    @media (max-width: 450px) {
+      .social__btn {
+        margin: 10px auto; } }
   .social__btn-column {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -479,7 +484,7 @@ button {
       font-size: 14px;
       color: #191919; }
   .social__btn-text-margin {
-    margin-right: 5px; }
+    margin-right: 8px; }
   .social__btn-text-icon {
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
@@ -956,9 +961,9 @@ button {
     .brand__link:hover {
       color: #e93f2e; }
       .brand__link:hover:before {
-        content: url("../images/assets/icons/arrow-right-red.png"); }
+        content: url("../images/assets/icons/double-arrow-right-red.png"); }
     .brand__link:before {
-      content: url("../images/assets/icons/arrow-right.png");
+      content: url("../images/assets/icons/double-arrow-right.png");
       display: inline-block;
       width: 14px;
       height: 11px;
@@ -1000,6 +1005,15 @@ button {
     @media (max-width: 1024px) {
       .brand__manual-item {
         margin: 2px 0; } }
+    @media (max-width: 768px) {
+      .brand__manual-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 5px 0; } }
   @media (max-width: 1200px) {
     .brand__manual-link {
       padding: 0 20px; } }
