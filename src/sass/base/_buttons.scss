@@ -57,6 +57,18 @@ button {
     }
   }
 
+  &__link {
+    transition: $base-animation-duration;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 5px;
+    display: inline-flex;
+
+    &:hover {
+      color: $cinnabar;
+    }
+  }
+
   &__default {
     background-color: transparent;
     color: $gray;

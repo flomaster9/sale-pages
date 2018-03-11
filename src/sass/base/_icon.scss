@@ -5,6 +5,10 @@
 
   &__feature {
     margin: auto;
+
+    &_sm {
+      margin-bottom: 10px;
+    }
   }
 
   &__search {
@@ -14,6 +18,19 @@
 
     @media #{$mobile-screen-sm-max} {
       padding: 20px;
+    }
+
+    &_flat {
+      padding: 0;
+      width: initial;
+
+      @media #{$tablet-screen-md-max} {
+        transform: scale(0.9);
+      }
+
+      @media #{$mobile-screen-sm-max} {
+        transform: scale(0.6);
+      }
     }
   }
 

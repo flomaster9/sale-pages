@@ -1,0 +1,109 @@
+.accessories {
+  margin: 40px 0;
+
+  &__table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+
+  &__table-container {
+    overflow-x: auto;
+  }
+
+  &__table-caption {
+    font-size: 24px;
+    color: $silver;
+
+    &:first-child {
+      padding: 10px;
+    }
+
+    @media #{$tablet-screen-sm-max} {
+      font-size: 18px;
+    }
+  }
+
+  &__table-row {
+    border-spacing: 10px;
+    transition: $base-animation-duration;
+
+    &:not(:first-child):not(.accessories__table-footer):hover {
+      background-color: $mercury;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $mercury;
+    }
+
+    &:not(:first-child):nth-child(odd) {
+      background-color: $gallery;
+
+      .accessories__table-text {
+        color: $cinnabar;
+      }
+    }
+  }
+
+  &__table-text {
+    color: $cod-gray;
+  }
+
+  &__table-link {
+    color: $cinnabar;
+    padding: 5px;
+    margin-right: 20px;
+    transition: $base-animation-duration;
+
+    &:hover {
+      color: $cod-gray;
+    }
+
+    &-helper {
+      color: $silver;
+      text-decoration: none;
+    }
+  }
+
+  td {
+    font-size: 18px;
+
+    &:first-child {
+      padding: 10px;
+      width: 350px;
+      height: 70px;
+    }
+
+    @media #{$tablet-screen-sm-max} {
+      font-size: 15px;
+
+      &:first-child {
+        padding: 10px;
+        width: 300px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__table-footer {
+    background-color: $cinnabar;
+  }
+
+  &__footer-text {
+    color: #fff;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  &__footer-img {
+    transform: rotate(-90deg);
+    vertical-align: middle;
+  }
+}
+
+// <tr class="accessories__table-row accessories__table-footer">
+// <td colspan="2">
+//   <span class="accessories__footer-text text_semi-bold">Show all Maytag Accsessories manuals</span>
+//   <img class="accessories__footer-img" src="images/assets/icons/double-arrow-bottom.png" alt="">
+// </td>

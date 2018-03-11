@@ -27,6 +27,10 @@ body,
     position: relative;
   }
 
+  &_manual {
+    display: block;
+  }
+
   &__footer {
     display: flex;
     flex: 1;

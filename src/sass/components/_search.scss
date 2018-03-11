@@ -3,6 +3,10 @@
   flex-direction: column;
   margin-top: 30px;
 
+  &_flat {
+    margin-top: 0;
+  }
+
   &__form-container {
     margin: auto;
     position: relative;
@@ -29,6 +33,20 @@
       height: 60px;
       bottom: -10px;
     }
+
+    &_flat {
+      height: 61px;
+      top: 0;
+      border-radius: 60px;
+
+      @media #{$tablet-screen-md-max} {
+        height: 47px;
+      }
+
+      @media #{$mobile-screen-sm-max} {
+        height: 37px;
+      }
+    }
   }
 
   &__form {
@@ -46,9 +64,8 @@
       color: $silver;
     }
 
-    &-btn {
-      color: #fff;
-      font-size: 50px;
+    &_flat {
+      margin: auto;
     }
 
     @media #{$tablet-screen-md-max} {

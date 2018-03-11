@@ -1,0 +1,38 @@
+.breadcrumbs {
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      color: $cinnabar;
+      margin-right: 10px;
+
+      &:after {
+        content: '/';
+        margin-left: 10px;
+        color: $gray;
+      }
+    }
+  }
+}
+
+// div class="breadcrumbs">
+//           <ul class="breadcrumbs__list">
+//             <li class="breadcrumbs__item">Manuals</li>
+//             <li class="breadcrumbs__item">Brands</li>
+//             <li class="breadcrumbs__item">HP manuals</li>
+//           </ul>

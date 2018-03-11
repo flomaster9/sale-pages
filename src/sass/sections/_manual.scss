@@ -1,0 +1,39 @@
+.manual {
+  background-color: $concrete;
+  margin-top: 40px;
+
+  @media #{$tablet-screen-sm-max} {
+    margin-top: 10px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media #{$mobile-screen-lg-max} {
+      flex-direction: column;
+    }
+  }
+
+  &__headline-container {
+    @media #{$mobile-screen-lg-max} {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    } 
+  }
+
+  &__nav-link {
+    color: $cod-gray;
+  }
+}

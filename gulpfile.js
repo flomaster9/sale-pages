@@ -6,7 +6,7 @@ let babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('build-html', function() {
-	gulp.src('./src/html/index.html')
+	gulp.src('./src/html/**/*.html')
 		.pipe(gulp.dest('./dist/'));
 });
 
@@ -49,6 +49,6 @@ gulp.task('serve',['build-images', 'watcher'], function() {
         open: true,
       },
 
-      startPath: './index.html'
+      startPath: './brand.html'
     })
 });

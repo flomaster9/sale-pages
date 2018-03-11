@@ -17,6 +17,10 @@
     border-bottom: 2px solid $alto;
   }
 
+  &_margin-bottom {
+    margin-bottom: 20px;
+  }
+
   @media #{$tablet-screen-sm-max} {
     flex-direction: column;
     text-align: center;
